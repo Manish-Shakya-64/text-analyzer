@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css";
+import Navbar from "./components/Navbar";
+import TextareaForm from "./components/TextareaForm";
+
+
 
 function App() {
+  const obj =  {
+    Title: "Created By Manish Shakya",
+    Home:"Home ",
+    Link:"Contact"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar title = {obj.Title} home = {obj.Home} link={obj.Link}/>
+    {/* <Navbar/> */}
+    <TextareaForm title="Enter text below"/>
+    </>
   );
 }
+
+
+
 
 export default App;
